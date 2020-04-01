@@ -5,9 +5,30 @@
     <link rel="shortcut icon" href="images/letter-b.svg" type="image/svg">
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="mainstyles.css">
+
+    <script>
+      function arrayRandElement(imgs) {
+      var rand = Math.floor(Math.random() * imgs.length);
+      return imgs[rand];
+      }
+
+      var imgs = [
+        "url('images/kittens/1.jpg')",
+        "url('images/kittens/2.jpg')",
+        "url('images/kittens/3.jpg')",
+        "url('images/kittens/4.jpg')",
+        "url('images/kittens/5.jpg')",
+        "url('images/kittens/6.jpg')"
+      ]
+
+      var one = arrayRandElement(imgs);
+      function back() {
+        document.body.style.backgroundImage = one;
+      }
+    </script>
   </head>
 <!---->
-  <body>
+  <body onload="back(one);">
       <div>
         <p>sait is down</p>
       </div>
